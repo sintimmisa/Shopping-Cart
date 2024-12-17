@@ -35,7 +35,7 @@ This is a responsive web application for a shopping cart built with **HTML**, **
 ### **Installation Instructions**
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/username/shopping-cart-app.git
+   git clone https://github.com/sintimmisa/Shopping-Cart.git
    cd shopping-cart-app
    ```
 
@@ -43,7 +43,7 @@ This is a responsive web application for a shopping cart built with **HTML**, **
    - Open `index.html` in your web browser.
 
 ### **Live Demo**
-- [View Live Application](https://your-live-demo-url.com)
+- [View Live Application](https://tmpshopping-cart.netlify.app/)
 
 ---
 
