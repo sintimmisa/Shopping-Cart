@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
               // Handle "Buy Now" button (optional)
               const buyNowButton = document.querySelector('.btn-secondary');
               buyNowButton.addEventListener('click', () => {
-                  //addToCart(product);
+                  //addToCart(product); // Add product to cart before redirect
                   window.location.href = './cart.html'; // Redirect to the cart page
               });
           } else {
@@ -59,33 +59,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Save the updated cart to localStorage
       localStorage.setItem('cart', JSON.stringify(cart));
+
       // Show success message
       showSuccessMessage("Product added to cart!");
-      //alert('Product added to cart!');
   }
 
   // Function to show Bootstrap success alert
   function showSuccessMessage(message) {
-    const alertContainer = document.getElementById('alert-container');
+      const alertContainer = document.getElementById('alert-container');
 
-    // Create a Bootstrap alert element
-    const alertDiv = document.createElement('div');
-    alertDiv.className = 'alert alert-success alert-dismissible fade show';
-    alertDiv.role = 'alert';
-    alertDiv.innerHTML = `
-        ${message}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    `;
+      // Create a Bootstrap alert element
+      const alertDiv = document.createElement('div');
+      alertDiv.className = 'alert alert-success alert-dismissible fade show';
+      alertDiv.role = 'alert';
+      alertDiv.innerHTML = `
+          ${message}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      `;
 
-    // Append to the alert container
-    alertContainer.appendChild(alertDiv);
+      // Append to the alert container
+      alertContainer.appendChild(alertDiv);
 
-    // Auto-dismiss after 3 seconds
-    setTimeout(() => {
-        alertDiv.classList.remove('show'); // Fade out
-        alertDiv.classList.add('fade');   // Add fade effect
-        setTimeout(() => alertDiv.remove(), 500); // Remove from DOM
-    }, 3000);
-}
+      // Auto-dismiss after 3 seconds
+      setTimeout(() => {
+          alertDiv.classList.remove('show'); // Fade out
+          alertDiv.classList.add('fade');   // Add fade effect
+          setTimeout(() => alertDiv.remove(), 500); // Remove from DOM
+      }, 3000);
+  }
 });
-
